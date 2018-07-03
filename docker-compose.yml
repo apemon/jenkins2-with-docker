@@ -2,6 +2,8 @@ version: "3"
 services: 
   jenkins-master:
     image: apemon/jenkins-master:latest
+    environment:
+      - JAVA_OPTS="-Xmx2048m"
     ports:
       - "10080:8080"
       - "50000:50000"
