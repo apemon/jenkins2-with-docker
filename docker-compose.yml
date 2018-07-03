@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  jenkins-data:
+    image: apemon/jenkins-data:latest
+  jenkins-master:
+    image: apemon/jenkins-master:latest
+    ports:
+      - "10080:8080"
+      - "50000:50000"
+    volumes:
+      - ./home:/var/jenkins_home
+      - ./logs:/var/log/jenkins
+
