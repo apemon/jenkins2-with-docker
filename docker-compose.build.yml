@@ -1,12 +1,7 @@
 version: "3.3"
 services: 
-  jenkins-data:
-    build:
-      context: .
-      dockerfile: data/Dockerfile
-    image: apemon/jenkins-data:latest
   jenkins-master:
     build:
       context: .
-      dockerfile: master/Dockerfile
+      dockerfile: Dockerfile
     image: apemon/jenkins-master:latest

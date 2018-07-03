@@ -1,7 +1,5 @@
 version: "3"
 services: 
-  jenkins-data:
-    image: apemon/jenkins-data:latest
   jenkins-master:
     image: apemon/jenkins-master:latest
     ports:
@@ -10,4 +8,5 @@ services:
     volumes:
       - ./home:/var/jenkins_home
       - ./logs:/var/log/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
 
